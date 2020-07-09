@@ -6,7 +6,7 @@
 
 ## Not so mature yet, we have some constants: 
 - The sender mail should be OUTLOOK.
-- Haven't implemented threading to avoid spam. (will work on that.)
+
 
 ## Excel Sheet template:
 | Name | Surname | Email | Mark | \.\.\. |
