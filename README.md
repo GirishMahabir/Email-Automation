@@ -22,17 +22,6 @@
 - Try send yourself an email to test the look.
 
 ### On Windows:
-#### Easy Way:
-Step 1: Download executable file. (automail.exe)
-
-Step 2: Run and give admin privilege. (For easy excel access install in same folder where your excel sheet is saved.)
-
-
-Step 3: Browse to the folder and run the automail.exe script.
-
-###### Now Follow on to the prompt section.
-
-#### Challenge:
 Step 1: Open Microsoft store and install python 3.7 or above.
 
 Step 2: Open PowerShell and type these commands below.
