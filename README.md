@@ -22,6 +22,17 @@
 - Try send yourself an email to test the look.
 
 ### On Windows:
+#### Easy Way:
+Step 1: Download executable file. (automail.exe)
+
+Step 2: Run and give admin privilege. (For easy excel access install in same folder where your excel sheet is saved.)
+
+
+Step 3: Browse to the folder and run the automail.exe script.
+
+###### Now Follow on to the prompt section.
+
+#### Challenge:
 Step 1: Open Microsoft store and install python 3.7 or above.
 
 Step 2: Open PowerShell and type these commands below.
@@ -32,26 +43,19 @@ Step 3: Run the script from PowerShell or cmd:
 ```commandline
 $ python automail.py
 ```
-- 1st prompt: name or path of the .xlsx file. 
-(If having a problem with path try put the script in the same folder as the .xlsx file and instead of the path just put the name.)
-- 2nd prompt: Your outlook email address.
-- 3rd prompt: Your Email subject.
-- 4th prompt: The custom message you want to put after the Hello <Student name,> and above the mark tab.
-- 5th prompt: The Assignment max mark.
-- 6th prompt: the password of your email.
+###### Now Follow on to the prompt section.
 
 ### On Linux:
-This script was first made for windows users so some features like terminal clear aren't functional yet.
-Will be fixed in the next release.
 ```commandline
-$ pip install openpyxl (Dependency)
+$ pip install openpyxl
 $ python automail.py
 ```
+###### Now Follow on to the prompt section.
+### Prompts Explained:
 - 1st prompt: name or path of the .xlsx file. 
 (If having a problem with path try put the script in the same folder as the .xlsx file and instead of the path just put the name.)
 - 2nd prompt: Your outlook email address.
 - 3rd prompt: Your Email subject.
 - 4th prompt: The custom message you want to put after the Hello <Student name,> and above the mark tab.
 - 5th prompt: The Assignment max mark.
-- 6th prompt: the password of your email.
- 
+- 6th prompt: the password of your email..
