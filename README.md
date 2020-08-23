@@ -1,22 +1,45 @@
 # BULK MAIL SENDING.
+## Situation:
+Teachers save student's details and assignment marks in an excel sheet. 
+At the end of the day when the teacher wants to send each student's mark individually, it gets bulky and time-consuming.
 
-- Normally for teachers who save their student's details and marks in an excel sheet.
-- This script automates the sending of each student mark individually.
-- Each mail is secured, using TLS and SSL.
+Using Python along with its GUI and multi-thread Libraries I proposed an app that reads from the excel file 
+(The student name, surname, email-address and mark.) It then requires the teacher to prepare a static message subject
+header along with some personal details about the teacher.
 
-## Not so mature yet, we have some constants: 
+After that, everything is handled by the script.
+The script automatically builds a custom message one by one for each student and then sends it to the student.
+
+In version 1 of the Bulk Mailing App, we had a template that the user had to follow so as the script can know
+which column has which data.
+
+In version 2 of the Bulk Mailing App, you can have additional columns in any order as long as the 
+column name of the required fields is set right.
+
+We should also note that each mail is secured, using TLS and SSL.
+
+## Limitations:
 - The sender mail should be OUTLOOK.
 
+- The Excel Sheet: The script is case sensitive.
+    - Name of the student column should be: Name
+    - The surname of the student column should be: Surname
+    - Email of the student column should be: Email
+    - Mark of the student column should be: Mark
+    
+## Excel Example:
 
-## Excel Sheet template:
-| Name | Surname | Email | Mark | \.\.\. |
-|------|---------|-------|------|--------|
-|      |         |       |      |        |
-- The First 4 columns must be as above.
-- After the column mark, you can put whatever you want.
+
+| Name  | Surname | Address                  | Email                    | Assignment 1  | Assignment 2 | Mark      |
+|-------|---------|--------------------------|--------------------------|---------------|--------------|-----------|
+| Aubin | Grimard | 21, Avenue Jean Portalis | aubaingrimard@dayrep.com | 60            | 80           | 90        |
+
+
+The program will Send the column that's says Mark, Assignment 1 and 2 will be ignored.
+
+Address will also be ignored by the program.
 
 ## Usage:
-
 - You can edit the script's msg_built function to customize your static message. (Play safe!)
 - It is simple HTML, you can try to add pictures also(experimental feature!)
 - Try send yourself an email to test the look.
@@ -32,19 +55,12 @@ Step 3: Run the script from PowerShell or cmd:
 ```commandline
 $ python automail.py
 ```
-###### Now Follow on to the prompt section.
-
 ### On Linux:
 ```commandline
 $ pip install openpyxl
 $ python automail.py
 ```
-###### Now Follow on to the prompt section.
-### Prompts Explained:
-- 1st prompt: name or path of the .xlsx file. 
-(If having a problem with path try put the script in the same folder as the .xlsx file and instead of the path just put the name.)
-- 2nd prompt: Your outlook email address.
-- 3rd prompt: Your Email subject.
-- 4th prompt: The custom message you want to put after the Hello <Student name,> and above the mark tab.
-- 5th prompt: The Assignment max mark.
-- 6th prompt: the password of your email..
+
+### Directly Use the executable.
+
+## Fill in the GUI and start.
