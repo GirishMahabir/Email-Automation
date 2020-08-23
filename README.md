@@ -60,7 +60,6 @@ $ python automail.py
 $ pip install openpyxl
 $ python automail.py
 ```
-
-### Directly Use the executable.
+The background image is needed to start the application.
 
 ## Fill in the GUI and start.
