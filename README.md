@@ -44,6 +44,40 @@ Address will also be ignored by the program.
 - It is simple HTML, you can try to add pictures also(experimental feature!)
 - Try send yourself an email to test the look.
 
+### If on windows 64 bit:
+You can just use the executable in the Packaged Folder.
+
+#### How we packaged the app(You can re-package it yourself for any other OS or for security purpose):
+```commandline
+$ pip install pyinstaller
+```
+
+Modified the python script to take the relative path of the background image that we've used in the app.
+Where we had to put the path of our image in the GUI, we just pass this function
+```python
+def resource_path(relative_path):
+    """
+    Deals with external files that will be neaded after
+    packaging.
+    :param relative_path: path of file.
+    :return: relative path.
+    """
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
+
+
+poly_logo_path = tk.PhotoImage(file=resource_path("some_back.png"))
+```
+In our spec file of pyinstaller we need to add some line and make some changes:
+```specfile
+a.datas += [('some_back.png', '.\\some_back.png', 'DATA')]
+
+# Exe section:
+console=false
+```
 ### On Windows:
 Step 1: Open Microsoft store and install python 3.7 or above.
 
