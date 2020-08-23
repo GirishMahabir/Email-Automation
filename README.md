@@ -35,7 +35,7 @@ We should also note that each mail is secured, using TLS and SSL.
 | Aubin | Grimard | 21, Avenue Jean Portalis | aubaingrimard@dayrep.com | 60            | 80           | 90        |
 
 
-The program will Send the column that's says Mark, Assignment 1 and 2 will be ignored.
+The program will use the column that's says Mark. Assignment 1 and 2 will be ignored.
 
 Address will also be ignored by the program.
 
