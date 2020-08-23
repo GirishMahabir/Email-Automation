@@ -29,11 +29,15 @@ We should also note that each mail is secured, using TLS and SSL.
     
 ## Excel Example:
 
-+-------+---------+--------------------------+--------------------------+---------------+--------------+-----------+
+
 | Name  | Surname | Address                  | Email                    | Assignment 1  | Assignment 2 | Mark      |
-+-------+---------+--------------------------+--------------------------+---------------+--------------+-----------+
-| Aubin | Grimard | 21, Avenue Jean Portalis | aubaingrimard@dayrep.com | 60            | 80           | | 90      |
-+-------+---------+--------------------------+--------------------------+---------------+--------------+-----------+
+|-------|---------|--------------------------|--------------------------|---------------|--------------|-----------|
+| Aubin | Grimard | 21, Avenue Jean Portalis | aubaingrimard@dayrep.com | 60            | 80           | 90        |
+
+
+The program will Send the column that's says Mark, Assignment 1 and 2 will be ignored.
+
+Address will also be ignored by the program.
 
 ## Usage:
 - You can edit the script's msg_built function to customize your static message. (Play safe!)
@@ -60,6 +64,3 @@ $ python automail.py
 ### Directly Use the executable.
 
 ## Fill in the GUI and start.
-
-## PYINSTALLER:
-
