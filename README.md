@@ -44,8 +44,8 @@ Address will also be ignored by the program.
 - It is simple HTML, you can try to add pictures also(experimental feature!)
 - Try send yourself an email to test the look.
 
-### If on windows 64 bit:
-You can just use the executable in the Packaged Folder.
+### PyInstaller Instructions:
+If on windows 64 bit, You can just use the executable in the Packaged Folder.
 
 #### How we packaged the app(You can re-package it yourself for any other OS or for security purpose):
 ```commandline
